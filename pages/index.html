@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../js/javascript.js" /> -->
+    <script src="../js/javascript.js"></script>
+   
+</head>
+
+<script>
+    // window.document.write('Hello')
+    // window.console.log('Console')
+
+    // var c = window.prompt('Value');
+    // console.log(c);
+
+    function fun() {
+        var a = document.f1.n1.value;
+        var b = document.f1.n2.value;
+
+        a = parseInt(a);
+        b = parseInt(b);
+
+        var result = a + b;
+        var s = document.getElementById("s");
+        s.innerHTML = result;
+
+        console.log(a);
+        console.log(b);
+        console.log(result);
+
+        // function f2(){
+        //     alert('Hii')
+        // }
+
+    }
+
+    a = 1000;
+    console.log(a);
+    var a;
+     
+
+    let by=`hello check`;
+    document.body.innerHTML=by;
+
+</script>
+
+<body>
+    <h1>Practice JS</h1>
+
+    <form name="f1">
+        <label for="number1">Number1:</label>
+        <input type="text" name="n1" /><br />
+
+        <label for="number2">Number2:</label>
+        <input type="text" name="n2" /><br />
+
+        <input type="button" onclick="fun()" value="ADD" />
+    </form>
+    <p>RESULT:<span id="s">0</span></p>
+
+</body>
+
+</html>

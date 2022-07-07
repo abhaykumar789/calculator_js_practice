@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>java application</title>
+  </head>
+
+  <body>
+    <h1>application form</h1>
+    <form name="o1" >
+        <label for="n1">number1</label>
+        <input type="text" name="n1" required><br />
+        <label for="n2">number2</label>
+        <input type="text" name="n2" required><br />
+        <input type="submit" onclick="addf()" value="add">
+        <input type="button" onclick="subf()" value="sub">
+        <input type="button" onclick="mulf()" value="mul">
+        <input type="button" onclick="divf()" value="div">
+
+    </form>
+
+    <!-- <form action="" name="o1">
+        <label for="n1">NUMBER 1:</label>
+        <input type="text" id="n1" name="n1" required>
+        <label for="N2"> NUMBER 2:</label>
+        <input type="text" id="n2" name="n2" required>
+        <input type="submit">
+      </form> -->
+<!-- 
+    <form action="" method="get">
+      <label for="n1">number1</label>
+      <input type="text" name="n1" required /><br />
+
+      <label for="n2">number2</label>
+      <input type="text" name="n2" required /><br /><br />
+
+      <button type="submit" onclick="addf()" value="1">ADD</button>
+      <button type="submit" onclick="subf()" value="sub">SUB</button>
+      <button type="submit" onclick="mulf()" value="mul">MUL</button>
+      <button type="submit" onclick="divf()" value="div">DIV</button>
+    </form> -->
+
+    <p>RESULT:<span id="s">0</span></p>
+    <p>status:<span id="r">0</span></p>
+
+    <script>
+      function addf() {
+        var a = document.o1.n1.value;
+        var b = document.o1.n2.value;
+        a = parseInt(a);
+        b = parseInt(b);
+        var c = a + b;
+        var s = document.getElementById("s");
+        s.innerHTML = c;
+        var r = document.getElementById("r");
+        r.innerHTML = "user has performed addition";
+      }
+
+      function subf() {
+        var a = document.o1.n1.value;
+        var b = document.o1.n2.value;
+        a = parseInt(a);
+        b = parseInt(b);
+        var c = a - b;
+        var s = document.getElementById("s");
+        s.innerHTML = c;
+        var r = document.getElementById("r");
+        r.innerHTML = "user has performed substraction";
+      }
+
+      function mulf() {
+        var a = document.o1.n1.value;
+        var b = document.o1.n2.value;
+        a = parseInt(a);
+        b = parseInt(b);
+        var c = a * b;
+        var s = document.getElementById("s");
+        s.innerHTML = c;
+        var r = document.getElementById("r");
+        r.innerHTML = "user has performed multiplication";
+      }
+
+      function divf() {
+        var a = document.o1.n1.value;
+        var b = document.o1.n2.value;
+        a = parseInt(a);
+        b = parseInt(b);
+        var c = a / b;
+        var s = document.getElementById("s");
+        s.innerHTML = c;
+        var r = document.getElementById("r");
+        r.innerHTML = "user has performed division";
+      }
+    </script>
+  </body>
+</html>
